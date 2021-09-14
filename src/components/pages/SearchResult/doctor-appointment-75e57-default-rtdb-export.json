@@ -1,0 +1,40 @@
+{
+  "Doctor" : {
+    "Asini Wikramaarachchi" : {
+      "Special Notes" : "SRI JAYAWARDENEPURA FACULTY",
+      "Specialization" : "Allergy Specialist"
+    },
+    "Binuri Alahakoon" : {
+      "Special Notes" : "NO REFUNDS AND CANCELLATIONS",
+      "Specialization" : "Back Pain Treatment"
+    },
+    "Chandu Kumara" : {
+      "Special Notes" : "NO REFUNDS AND CANCELLATIONS",
+      "Specialization" : "Cardiac Surgeon"
+    },
+    "Dinary Perera" : {
+      "Specialization" : "Dental Surgeon"
+    },
+    "Ganga Hewapathirana" : {
+      "Special Notes" : "NO REFUNDS AND CANCELLATIONS",
+      "Specialization" : "Dental Surgeon"
+    },
+    "Gayani Perera" : {
+      "Special Notes" : "NO REFUNDS AND CANCELLATIONS",
+      "Specialization" : "Eye Surgeon"
+    },
+    "Hasindu Kalupathirana" : {
+      "Specialization" : "ENT Surgeon"
+    },
+    "Isindi Perera" : {
+      "Special Notes" : "NO REFUNDS AND CANCELLATIONS",
+      "Specialization" : "General Physician"
+    },
+    "Jagath Kahawita" : {
+      "Specialization" : "Kidney Transplant Surgeon"
+    },
+    "Lalith Perera" : {
+      "Specialization" : "Psychological Counselling"
+    }
+  }
+}

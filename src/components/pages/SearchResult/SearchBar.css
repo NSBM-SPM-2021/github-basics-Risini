@@ -1,0 +1,19 @@
+  .screenright{
+    border: 1px solid black;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 50%;
+    background-color: lightblue;
+  }
+
+  .screenleft{
+    border: 1px solid black;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 50%;
+    margin-left: 150px;
+    background-color: lightblue;
+  }
+

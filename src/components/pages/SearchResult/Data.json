@@ -1,0 +1,62 @@
+[
+    {
+        "doctorname": "Asini Wikramaarachchi",
+        "Specialization": "Allergy Specialist",
+        "date": "20/09/2021",
+        "hospital": "Asiri Hospital"
+    },
+    {
+        "doctorname": "Binuri Alahakoon" ,
+        "Specialization": "Back Pain Treatment" ,
+        "date": "20/09/2021" ,
+        "hospital": "Body Doc Medicare - Malabe"
+    },
+    {
+        "doctorname": "Chandu Kumara" ,
+        "Specialization": "Cardiac Surgeon" ,
+        "date": "20/09/2021" ,
+        "hospital": " Ceylinco Healthcare Center Colombo 02"
+    },
+    {
+        "doctorname": "Dinary Perera" ,
+        "Specialization": "Dental Surgeon" ,
+        "date": "20/09/2021" ,
+        "hospital": "Family Dental Services Colombo 03"
+    },
+    {
+        "doctorname": "Ganga Hewapathirana" ,
+        "Specialization": "Dental Surgeon" ,
+        "date": "20/09/2021" ,
+        "hospital": "Durdans Hospital Colombo 03"
+    },
+    {
+        "doctorname": "Gayani Perera" ,
+        "Specialization": "Eye Surgeon" ,
+        "date": "20/09/2021" ,
+        "hospital": "Golden Key Hospital Limited - Rajagiriya"
+    },
+    {
+        "doctorname": "Hasindu Kalupathirana" ,
+        "Specialization": "ENT Surgeon" ,
+        "date": "20/09/2021" ,
+        "hospital": "Hemas Hospital - Thalawathugoda"
+    },
+    {
+        "doctorname": "Isindi Perera" ,
+        "Specialization": "General Physician" ,
+        "date": "20/09/2021" ,
+        "hospital": "Lanka Hospital Colombo 05"
+    },
+    {
+        "doctorname": "Jagath Kahawita" ,
+        "Specialization": "Kidney Transplant Surgeon" ,
+        "date": "20/09/2021" ,
+        "hospital": "Miracle Health Hoslpital - Kurunagala"
+    },
+    {
+        "doctorname": "Lalith Perera" ,
+        "Specialization": "Psychological Counselling" ,
+        "date": "20/09/2021" ,
+        "hospital": "Namaloka Hospital Colombo"
+    }
+]
