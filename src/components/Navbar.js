@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FaLaptopMedical} from 'react-icons/fa';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Button } from './Button';
@@ -46,33 +46,28 @@ function Navbar() {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/contactus' className="nav-links" onClick={closeMobileMenu}>
+                            <NavLink to='/contactus' className="nav-links" onClick={closeMobileMenu}>
                                 Contact Us
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
                             <Link to='/aboutus' className="nav-links" onClick={closeMobileMenu}>
                                 About Us
                             </Link>
                         </li>
-                        {/* <li className="nav-item">
-                            <Link to='/appointment' className="nav-links" onClick={closeMobileMenu}>
-                                Appointment
-                            </Link>
-                        </li> */}
                         <li className='nav-btn'>
                 {button ? (
-                  <Link to='/sign-up' className='btn-link'>
-                    <Button buttonStyle='btn--outline'>SIGN UP</Button>
+                  <Link to='/appointment' className='btn-link'>
+                    <Button buttonStyle='btn--outline'>Appointment</Button>
                   </Link>
                 ) : (
-                  <Link to='/sign-up' className='btn-link'>
+                  <Link to='/appointment' className='btn-link'>
                     <Button
                       buttonStyle='btn--outline'
                       buttonSize='btn--mobile'
                       onClick={closeMobileMenu}
                     >
-                      SIGN UP
+                      Appointment
                     </Button>
                   </Link>
                            )} 

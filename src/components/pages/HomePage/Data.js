@@ -38,15 +38,15 @@ export const homeObjOne = {
   };
   
   export const homeObjFour = {
-    lightBg: false,
-    lightText: true,
-    lightTextDesc: true,
-    topLine: 'DATA ANALYTICS',
-    headline: 'Every transaction is stored on our secure cloud database',
+    lightBg: true,
+    lightText: false,
+    lightTextDesc: false,
+    topLine: 'Make an appointment now',
+    headline: 'To get the best service make an appointment for the best doctor to get a healthy life.',
     description:
-      'Never ever have to worry again about saved reciepts. We store your data, so you can access it anytime.',
-    buttonLabel: 'Sign Up Now',
+      'All the appointments will be directed to a doctor to approve. When approved a message will be directed to you.',
+    buttonLabel: 'Make an Appointment',
     imgStart: 'start',
-    img: 'images/svg-8.svg',
+    img: 'images/Doc3.svg',
     alt: 'Vault'
   };
