@@ -4,7 +4,7 @@ import Home from './components/pages/HomePage/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/pages/Footer.js/Footer';
-import Appointment from './components/pages/MakeAppointment/Appointment'
+import Appointment from './components/pages/MakeAppointment/Appointmentclass'
 
 function App() {
   return (
