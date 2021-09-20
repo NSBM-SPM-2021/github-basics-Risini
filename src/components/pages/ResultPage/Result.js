@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
 
 function Result() {
     return (
         <div>
-            Hii!
+            <label>Patients Name : </label>
+            <label>Age : </label>
+            <label>Gender : </label>
+            <label>Date : </label>
+            <label>Time : </label>
+            <label>Problem : </label>
         </div>
     )
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import {
     Card, CardHeader, CardBody, Form, FormGroup, Label, Input, FormText, Button, Alert
   } from 'reactstrap';
+  import { Link } from 'react-router-dom';
   import './NewAppointment.css';
 
 class AddAppointments extends React.Component {
@@ -119,8 +120,10 @@ class AddAppointments extends React.Component {
             </div>
             <Alert className='fill_detail' color="danger">
               Please fill all the details
-          </Alert>
-            <Button className='form-input-btn' type="submit" color="primary" block>Add Appointment</Button>
+            </Alert>
+            <Link to='/Result'>
+              <Button className='form-input-btn' type="submit" color="primary" block>Add Appointment</Button>
+            </Link>
           </Form>
         </CardBody>
       </Card >
