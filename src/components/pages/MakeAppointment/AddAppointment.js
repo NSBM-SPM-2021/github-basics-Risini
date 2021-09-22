@@ -4,6 +4,7 @@ import {
   } from 'reactstrap';
   import { Link } from 'react-router-dom';
   import './NewAppointment.css';
+import firebaseDatabase from '../../../firebase';
 
 class AddAppointments extends React.Component {
   constructor(props) {
@@ -19,6 +20,7 @@ class AddAppointments extends React.Component {
       formErrors: false
     };
   }
+
   toggleBody = () => {
     this.setState({
       showBody: !this.state.showBody
@@ -58,6 +60,8 @@ class AddAppointments extends React.Component {
 
   }
   handleChange = (event) => {
+    let patientName = firebaseDatabase.database().ref('patientName').orderByKey().limitToLast
+    firebaseDatabase.database().ref('patientName').push(this.state.patientName);
     this.setState({
       [event.target.id]: event.target.value
     });
