@@ -6,6 +6,8 @@ import Footer from './components/pages/Footer.js/Footer';
 import Home from './components/pages/HomePage/Home';
 import Appointment from './components/pages/MakeAppointment/Appointmentclass';
 import Result from './components/pages/ResultPage/Result';
+import GetFirebase from './GetFirebase';
+import SnapshotFirebase from './SnapshotFirebase';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/appointment' component={Appointment} />
+        {get ? <GetFirebase /> : <SnapshotFirebase />}
+        <SnapshotFirebaseAdvanced />
         <Route path='/Result' exact component={Result} />
       </Switch>
       <Footer />
