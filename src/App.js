@@ -6,8 +6,7 @@ import Footer from './components/pages/Footer.js/Footer';
 import Home from './components/pages/HomePage/Home';
 import Appointment from './components/pages/MakeAppointment/Appointmentclass';
 import Result from './components/pages/ResultPage/Result';
-import GetFirebase from './GetFirebase';
-import SnapshotFirebase from './SnapshotFirebase';
+
 
 function App() {
   return (

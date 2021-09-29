@@ -4,11 +4,12 @@ import {
   } from 'reactstrap';
   import { Link } from 'react-router-dom';
   import './NewAppointment.css';
-  import firebase from "../../../firebase/app";
+  import firebase from "../../../firebase";
   import { v4 as uuidv4 } from "uuid";
 
-function GetFirebase(){
+function AddAppointment(){
   const [appointment, setAppointment] = useState([]);
+  const [loading, setLoading] = useState(false);
   const [patientName, setPatientName] = useState("");
   const [patientAge, setPatientAge] = useState("");
   const [gender, setGender] = useState("");
@@ -19,15 +20,19 @@ function GetFirebase(){
 
 const ref = firebase.firestore().collection("appointment");
 
-  //ONE TIME GET FUNCTION
+  //REALTIME GET FUNCTION
   function getAppointment() {
     setLoading(true);
-    ref.get().then((item) => {
-      const items = item.docs.map((doc) => doc.data());
+    ref.onSnapshot((querySnapshot) => {
+      const items = [];
+      querySnapshot.forEach((doc) => {
+        items.push(doc.data());
+      });
       setAppointment(items);
       setLoading(false);
     });
   }
+
   useEffect(() => {
     getAppointment();
     // eslint-disable-next-line
@@ -107,4 +112,4 @@ const ref = firebase.firestore().collection("appointment");
     )
 }
 
-export default GetFirebase;
+export default AddAppointment;

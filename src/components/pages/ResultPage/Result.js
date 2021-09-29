@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Fragment } from "react";
-import firebase from './firebase';
+import firebase from '../../../firebase';
 
 function GetResult() {
     const [appointment, setAppointment] = useState([]);
