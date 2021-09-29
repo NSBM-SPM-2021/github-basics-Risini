@@ -15,11 +15,6 @@ function GetResult() {
         ref
         .doc(appointment.id)
         .delete()
-        .then(() => {
-            setAppointment((prev) =>
-            prev.filter((element) => element.id !== appointment.id)
-            );
-        })
         .catch((err) => {
             console.error(err);
         });
@@ -31,16 +26,6 @@ function GetResult() {
         ref
         .doc(updatedAppointment.id)
         .update(updatedAppointment)
-        .then(() => {
-            setAppointment((prev) =>
-            prev.map((element) => {
-                if (element.id !== updatedAppointment.id) {
-                return element;
-                }
-                return updatedAppointment;
-            })
-            );
-        })
         .catch((err) => {
             console.error(err);
         });

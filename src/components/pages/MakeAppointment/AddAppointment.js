@@ -39,9 +39,6 @@ const ref = firebase.firestore().collection("appointment");
       //.doc() use if for some reason you want that firestore generates the id
       .doc(NewAppointment.id)
       .set(NewAppointment)
-      .then(() => {
-        setAppointment((prev) => [NewAppointment, ...prev]);
-      })
       .catch((err) => {
         console.error(err);
       });

@@ -16,8 +16,6 @@ function App() {
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/appointment' component={Appointment} />
-        {get ? <GetFirebase /> : <SnapshotFirebase />}
-        <SnapshotFirebaseAdvanced />
         <Route path='/Result' exact component={Result} />
       </Switch>
       <Footer />
