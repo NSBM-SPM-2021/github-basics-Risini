@@ -51,7 +51,7 @@ function GetResult() {
                 <p>{appointment.aptNotes}</p>
                 <div>
                     <button onClick={() => deleteAppointment(appointment)}>DELETE</button>
-                    <button onClick={() =>editAppointment({ patientName: appointment.patientName, patientAge, gender, aptDate, aptTime, aptNotes, id: appointment.id })}>
+                    <button onClick={() =>editAppointment({ patientName: appointment.patientName, patientAge: appointment.patientAge, gender: appointment.gender, aptDate: appointment.aptDate, aptTime: appointment.aptTime, aptNotes: appointment.aptNotes, id: appointment.id })}>
                     EDIT
                     </button>
                 </div>

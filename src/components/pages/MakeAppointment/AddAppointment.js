@@ -5,7 +5,9 @@ import {
   import { Link } from 'react-router-dom';
   import './NewAppointment.css';
   import firebase from "../../../firebase";
+  import "firebase/firestore"
   import { v4 as uuidv4 } from "uuid";
+ 
 
 function AddAppointment(){
   const [appointment, setAppointment] = useState([]);
@@ -18,7 +20,9 @@ function AddAppointment(){
   const [aptNotes, setAptNotes] = useState("");
 
 
+
 const ref = firebase.firestore().collection("appointment");
+
 
   //REALTIME GET FUNCTION
   function getAppointment() {
