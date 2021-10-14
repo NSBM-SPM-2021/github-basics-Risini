@@ -1,14 +1,33 @@
 import React, { useState, useEffect, Fragment } from "react";
 import firebase from '../../../firebase';
+import "firebase/firestore";
 
 function GetResult() {
     const [appointment, setAppointment] = useState([]);
     const [loading, setLoading] = useState(false);
     
-    
-    // const [appointment, setAppointment] = useState("");
-    
     const ref = firebase.firestore().collection("appointment");
+    
+    //GET FIREBASE DATA
+    function getAppointments(){
+        setLoading(true);
+        ref.onSnapshot((querySnapshot) => {
+            const items = [];
+            querySnapshot.forEach((doc) => {
+                items.push(doc.data());
+            });
+            setAppointment(items);
+            setLoading(false);
+        });
+    }
+
+    useEffect(() => {
+        getAppointments();
+    }, []);
+
+    if (loading) {
+        return <h1>Loading...</h1>;
+    }
 
     //DELETE FUNCTION
     function deleteAppointment(appointment) {
@@ -34,21 +53,21 @@ function GetResult() {
     return (
         <Fragment>
             {loading ? <h1>Loading...</h1> : null}
-            {appointment.map((appointment) => (
-            <div className="appointment" key={appointment.id}>
+            {appointment.map((madeappointment) => (
+            <div className="appointment" key={madeappointment.id}>
                 <h1>Appointments</h1><hr/>
                 <label>Patients Name : </label>
-                <h2>{appointment.patientName}</h2>
+                <h2>{madeappointment.patientName}</h2>
                 <label>Age : </label>
-                <p>{appointment.patientAge}</p>
+                <p>{madeappointment.patientAge}</p>
                 <label>Gender : </label>
-                <p>{appointment.gender}</p>
+                <p>{madeappointment.gender}</p>
                 <label>Date : </label>
-                <p>{appointment.aptDate}</p>
+                <p>{madeappointment.aptDate}</p>
                 <label>Time : </label>
-                <p>{appointment.aptTime}</p>
+                <p>{madeappointment.aptTime}</p>
                 <label>Problem : </label>
-                <p>{appointment.aptNotes}</p>
+                <p>{madeappointment.aptNotes}</p>
                 <div>
                     <button onClick={() => deleteAppointment(appointment)}>DELETE</button>
                     <button onClick={() =>editAppointment({ patientName: appointment.patientName, patientAge: appointment.patientAge, gender: appointment.gender, aptDate: appointment.aptDate, aptTime: appointment.aptTime, aptNotes: appointment.aptNotes, id: appointment.id })}>

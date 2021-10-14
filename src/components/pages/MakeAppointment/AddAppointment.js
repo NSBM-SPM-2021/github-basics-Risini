@@ -18,7 +18,7 @@ function AddAppointment(){
   const [aptTime, setAptTime] = useState("");
   const [aptNotes, setAptNotes] = useState("");
 
-const ref = firebase.firestore().collection("appointment");
+  const ref = firebase.firestore().collection("appointment");
 
   //REALTIME GET FUNCTION
   function getAppointment() {
