@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.7113f2dc.chunk.css",
-    "main.js": "/static/js/main.9913dc1e.chunk.js",
-    "main.js.map": "/static/js/main.9913dc1e.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.fc160293.js",
-    "runtime-main.js.map": "/static/js/runtime-main.fc160293.js.map",
-    "static/js/2.57ae71da.chunk.js": "/static/js/2.57ae71da.chunk.js",
-    "static/js/2.57ae71da.chunk.js.map": "/static/js/2.57ae71da.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.7113f2dc.chunk.css.map": "/static/css/main.7113f2dc.chunk.css.map",
-    "static/js/2.57ae71da.chunk.js.LICENSE.txt": "/static/js/2.57ae71da.chunk.js.LICENSE.txt"
+    "main.css": "/github-basics-Risini/static/css/main.7113f2dc.chunk.css",
+    "main.js": "/github-basics-Risini/static/js/main.9913dc1e.chunk.js",
+    "main.js.map": "/github-basics-Risini/static/js/main.9913dc1e.chunk.js.map",
+    "runtime-main.js": "/github-basics-Risini/static/js/runtime-main.db493c00.js",
+    "runtime-main.js.map": "/github-basics-Risini/static/js/runtime-main.db493c00.js.map",
+    "static/js/2.3cc5e8b3.chunk.js": "/github-basics-Risini/static/js/2.3cc5e8b3.chunk.js",
+    "static/js/2.3cc5e8b3.chunk.js.map": "/github-basics-Risini/static/js/2.3cc5e8b3.chunk.js.map",
+    "index.html": "/github-basics-Risini/index.html",
+    "static/css/main.7113f2dc.chunk.css.map": "/github-basics-Risini/static/css/main.7113f2dc.chunk.css.map",
+    "static/js/2.3cc5e8b3.chunk.js.LICENSE.txt": "/github-basics-Risini/static/js/2.3cc5e8b3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.fc160293.js",
-    "static/js/2.57ae71da.chunk.js",
+    "static/js/runtime-main.db493c00.js",
+    "static/js/2.3cc5e8b3.chunk.js",
     "static/css/main.7113f2dc.chunk.css",
     "static/js/main.9913dc1e.chunk.js"
   ]
