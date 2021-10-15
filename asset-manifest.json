@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/NSBM-SPM-2021/github-basics-Risini/static/css/main.7113f2dc.chunk.css",
-    "main.js": "/NSBM-SPM-2021/github-basics-Risini/static/js/main.9913dc1e.chunk.js",
-    "main.js.map": "/NSBM-SPM-2021/github-basics-Risini/static/js/main.9913dc1e.chunk.js.map",
-    "runtime-main.js": "/NSBM-SPM-2021/github-basics-Risini/static/js/runtime-main.9daca36b.js",
-    "runtime-main.js.map": "/NSBM-SPM-2021/github-basics-Risini/static/js/runtime-main.9daca36b.js.map",
-    "static/js/2.d683379f.chunk.js": "/NSBM-SPM-2021/github-basics-Risini/static/js/2.d683379f.chunk.js",
-    "static/js/2.d683379f.chunk.js.map": "/NSBM-SPM-2021/github-basics-Risini/static/js/2.d683379f.chunk.js.map",
-    "index.html": "/NSBM-SPM-2021/github-basics-Risini/index.html",
-    "static/css/main.7113f2dc.chunk.css.map": "/NSBM-SPM-2021/github-basics-Risini/static/css/main.7113f2dc.chunk.css.map",
-    "static/js/2.d683379f.chunk.js.LICENSE.txt": "/NSBM-SPM-2021/github-basics-Risini/static/js/2.d683379f.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.7113f2dc.chunk.css",
+    "main.js": "/static/js/main.9913dc1e.chunk.js",
+    "main.js.map": "/static/js/main.9913dc1e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.fc160293.js",
+    "runtime-main.js.map": "/static/js/runtime-main.fc160293.js.map",
+    "static/js/2.57ae71da.chunk.js": "/static/js/2.57ae71da.chunk.js",
+    "static/js/2.57ae71da.chunk.js.map": "/static/js/2.57ae71da.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.7113f2dc.chunk.css.map": "/static/css/main.7113f2dc.chunk.css.map",
+    "static/js/2.57ae71da.chunk.js.LICENSE.txt": "/static/js/2.57ae71da.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.9daca36b.js",
-    "static/js/2.d683379f.chunk.js",
+    "static/js/runtime-main.fc160293.js",
+    "static/js/2.57ae71da.chunk.js",
     "static/css/main.7113f2dc.chunk.css",
     "static/js/main.9913dc1e.chunk.js"
   ]
