@@ -1,3 +1,8 @@
+# my Submission PDF
+Google Drive Link:
+https://drive.google.com/file/d/1SopWI2JHu8i713AkwpsiSPiDLaMBr6RX/view?usp=sharing
+OneDrive Link:
+https://1drv.ms/b/s!AnEJa-_bAgIkj18IYU2HhE8F0N2D
 # :wave: The Basics of GitHub 
 
 ## 🤓 Course overview and learning outcomes 
