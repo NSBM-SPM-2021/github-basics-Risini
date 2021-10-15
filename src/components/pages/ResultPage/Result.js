@@ -1,27 +1,34 @@
 import React, { useState, useEffect, Fragment } from "react";
-import firebase from '../../../firebase';
+import { getApps } from 'firebase/app';
+import { getFirestore, collection, doc, getDocs } from "firebase/firestore"
 
 function GetResult() {
     const [appointment, setAppointment] = useState([]);
     const [loading, setLoading] = useState(false);
     
-    const ref = firebase.firestore().collection("appointment");
+    const firebaseApp = getApps()[0];
+    const db = getFirestore();
+    console.log(db.app.options);
     
     //GET FIREBASE DATA
-    function getAppointments(){
+    // if (db.exists()) {
+    //     console.log("Document data:", db.data());
+    //   } else {
+    //     // doc.data() will be undefined in this case
+    //     console.log("No such document!");
+    //   }
+    async function getAppointment() {
         setLoading(true);
-        ref.onSnapshot((querySnapshot) => {
-            const items = [];
-            querySnapshot.forEach((doc) => {
-                items.push(doc.data());
-            });
-            setAppointment(items);
-            setLoading(false);
-        });
+        console.log("TEST")
+        const querySnapshot = await getDocs(collection(db, "appointment"));
+          querySnapshot.forEach((doc) => {
+            console.log(`${doc.id} => ${doc.data()}`);
+          });
+          console.log(querySnapshot.docs.length)
     }
 
     useEffect(() => {
-        getAppointments();
+        getAppointment();
     }, []);
 
     if (loading) {
@@ -29,8 +36,8 @@ function GetResult() {
     }
 
     //DELETE FUNCTION
-    function deleteAppointment(appointment) {
-        ref
+    async function deleteAppointment(appointment) {
+        db
         .doc(appointment.id)
         .delete()
         .catch((err) => {
@@ -39,9 +46,9 @@ function GetResult() {
     }
 
     // EDIT FUNCTION
-    function editAppointment(updatedAppointment) {
+    async function editAppointment(updatedAppointment) {
         setLoading();
-        ref
+        db
         .doc(updatedAppointment.id)
         .update(updatedAppointment)
         .catch((err) => {
@@ -75,7 +82,7 @@ function GetResult() {
                 </div>
             </div>
         ))}
-         </Fragment>
+        </Fragment>
     );
 }
 

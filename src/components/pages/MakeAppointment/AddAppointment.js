@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import {
-  Card, CardHeader, CardBody, Form, FormGroup, Label, Input, FormText, Button, Alert
-  } from 'reactstrap';
-  import { Link } from 'react-router-dom';
-  import './NewAppointment.css';
-  import firebase from "../../../firebase";
-  import { v4 as uuidv4 } from "uuid";
- 
+import {Card, CardHeader, CardBody, Form, FormGroup, Label, Input, FormText, Button, Alert} from 'reactstrap';
+import { Link } from 'react-router-dom';
+import './NewAppointment.css';
+import { v4 as uuidv4 } from "uuid";
+import { getApps } from 'firebase/app';
+import { getFirestore, collection, doc, getDocs, addDoc } from "firebase/firestore"
 
 function AddAppointment(){
   const [appointment, setAppointment] = useState([]);
@@ -18,19 +16,32 @@ function AddAppointment(){
   const [aptTime, setAptTime] = useState("");
   const [aptNotes, setAptNotes] = useState("");
 
-  const ref = firebase.firestore().collection("appointment");
+
+const firebaseApp = getApps()[0];
+const db = getFirestore();
+console.log(db.app.options);
+//const querySnapshot = await getDocs(collection(db, "appointment"));
+// const db = getFirestore(firebaseApp);
+// const ref = db.collection(db,'appointment')
+
 
   //REALTIME GET FUNCTION
-  function getAppointment() {
+  async function getAppointment() {
     setLoading(true);
-    ref.onSnapshot((querySnapshot) => {
-      const items = [];
+    console.log("TEST")
+    const querySnapshot = await getDocs(collection(db, "appointment"));
       querySnapshot.forEach((doc) => {
-        items.push(doc.data());
+        console.log(`${doc.id} => ${doc.data()}`);
       });
-      setAppointment(items);
-      setLoading(false);
-    });
+      console.log(querySnapshot.docs.length)
+    // ref.onSnapshot((querySnapshot) => {
+    //   const items = [];
+    //   querySnapshot.forEach((doc) => {
+    //     items.push(doc.data());
+    //   });
+    //   setAppointment(items);
+    //   setLoading(false);
+    // });
   }
 
   useEffect(() => {
@@ -39,14 +50,27 @@ function AddAppointment(){
   }, []);
 
   // ADD FUNCTION
-  function AddAppointments(NewAppointment) {
-    ref
-      //.doc() use if for some reason you want that firestore generates the id
-      .doc(NewAppointment.id)
-      .set(NewAppointment)
-      .catch((err) => {
-        console.error(err);
+  async function AddAppointments(NewAppointment) {
+    try {
+      const docRef = await addDoc(collection(db, "appointment"), {
+        patientName: patientName,
+        patientAge: patientAge,
+        gender: gender,
+        aptDate: aptDate,
+        aptTime: aptTime,
+        aptNotes: aptNotes
       });
+      console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+    // ref
+    //   //.doc() use if for some reason you want that firestore generates the id
+    //   .doc(NewAppointment.id)
+    //   .set(NewAppointment)
+    //   .catch((err) => {
+    //     console.error(err);
+    //   });
   }
 
   
@@ -58,7 +82,7 @@ function AddAppointment(){
           <FormText color="muted" className="mb-1">
             <span className='form-input-login'>* All fields are required </span>
           </FormText>
-          <Form className='form' onSubmit={this.save}>
+          <Form className='form'>
             <div className='form-inputs'>
               <FormGroup >
                 <Label className='form-label' for="patientName">Patient Name</Label>
@@ -102,12 +126,14 @@ function AddAppointment(){
             <Alert className='fill_detail' color="danger">
               Please fill all the details
             </Alert>
-            <Link to='/Result'>
-              <Button className='form-input-btn' type="submit" onClick={() => AddAppointments({ patientName, patientAge, gender, aptDate, aptTime, aptNotes, id: uuidv4() })} color="primary" block>Add Appointment</Button>
+            
+            <Link to='/DisplayResult'>
+            <Button className='form-input-btn' type="submit" onClick={() => AddAppointments({ patientName, patientAge, gender, aptDate, aptTime, aptNotes, id: uuidv4() })} color="primary" block>Add Appointment</Button>
             </Link>
+            
           </Form>
-        </CardBody>
-      </Card >
+          </CardBody>
+          </Card>
       </div>
     )
 }
